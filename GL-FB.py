@@ -130,12 +130,16 @@ try:
                         print(f"| Facebook | Job Like       | +{xu:<4} |   ...   |", end="\r")
                     elif kt_job_sad.is_displayed():
                         print(f"| Facebook | Job Buồn 😢    | +{xu:<4} |   ...   |", end="\r")
+                        continue # hiện tại chưa làm đc job buồn lên để vậy làm xong r có thể xóa
                     elif kt_job_anry.is_displayed():
                         print(f"| Facebook | Job ANGRY       | +{xu:<4} |   ...   |", end="\r")
+                        continue # bỏ job
                     elif kt_job_tt.is_displayed():
                         print(f"| Facebook | Job Thương 💗   | +{xu:<4} |   ...   |", end="\r")
+                        continue
                     elif kt_job_tim.is_displayed():
                         print(f"| Facebook | Job Tim 💗      | +{xu:<4} |   ...   |", end="\r")
+                        continue
                     else:
                         print(f"| Facebook | Không rõ job gì  |    +0    |   ...   |", end="\r")
                     time.sleep(2)
@@ -184,6 +188,7 @@ try:
                             time.sleep(2)
                         except:
                             print("job lỗi")
+                            driver.close()
                             continue
                             # nếu gặp lỗi thì qualai báo cáo và continue để bắt đầu lại 
                         driver.close()
@@ -208,7 +213,7 @@ try:
                         print(f"| Facebook | Hoàn thành      | +{xu:<4} |   ...   |", end="\r")
                     except:
                         print("| Facebook | Job lỗi      | +0 |   ...   |", end="\r")
-            # Nếu ko thấy nút like thì báo cáo<job lỗi>
+            
         except Exception as e:
             print(e)     
 finally:
