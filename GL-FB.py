@@ -217,7 +217,7 @@ try:
         except Exception as e:
             print(e)     
 finally:
-    print("Phiên bản: LikeFb_v1. Cảm ơn bạn đã sài tool")
+    print("Phiên bản: LikeFb. Cảm ơn bạn đã sài tool")
     
 while True:
     print("| 1 | Kiểm tra tài khoản")
